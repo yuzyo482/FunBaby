@@ -1,5 +1,3 @@
-"# FunBaby" 
-
 site:https://yuzyo482.github.io/FunBaby/
 
 
