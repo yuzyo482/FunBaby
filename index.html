@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN寶貝即時托育網</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="./testmodal.css">
+    <link rel="stylesheet" href="./css/detailmodal.css">
+    <script>
+        $.get("navbar.html", function (data) {
+            $(".header").html(data);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header">
+    </div>
+
+    <div class="container">
+        <div class="slideDiv">
+            <div class="slideContainer">
+                <div class="slide-track">
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide01.svg" alt="">
+                    </div>
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide02.svg" alt="">
+                    </div>
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide03.svg" alt="">
+                    </div>
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide04.svg" alt="">
+                    </div>
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide01.svg" alt="">
+                    </div>
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide02.svg" alt="">
+                    </div>
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide03.svg" alt="">
+                    </div>
+                    <div class="slidePic">
+                        <img src="./pics/slide/slide04.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="serviceRule" id="section01">
+            <p>服務對象與規定</p>
+            <div class="ruleBoxGroup">
+                <div class="ruleBox">
+                    <div class="ruleIcon"><img src="./pics/icon/icon11服務規定.png" alt=""></div>
+                    <div class="ruleContent">
+                        <div class="ruleTitle">服務規定</div>
+                        <ul>
+                            <li>最少托育時間為兩小時</li>
+                            <li>最晚預約時間為15:00</li>
+                            <li>最晚可在臨托前一小時申請預約</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ruleBox">
+                    <div class="ruleIcon"><img src="./pics/icon/icon12服務地區.png" alt=""></div>
+                    <div class="ruleContent">
+                        <div class="ruleTitle">服務地區</div>
+                        <ul>
+                            <li>臺北市：大安區、中山區、內湖區、松山區</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ruleBox">
+                    <div class="ruleIcon"><img src="./pics/icon/icon13服務對象.png" alt=""></div>
+                    <div class="ruleContent">
+                        <div class="ruleTitle">服務對象</div>
+                        <ul>
+                            <li>幼兒園階段兒童</li>
+                            <li>孩童年齡：3-5歲</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ruleBox">
+                    <div class="ruleIcon"><img src="./pics/icon/icon14收費價格.png" alt=""></div>
+                    <div class="ruleContent">
+                        <div class="ruleTitle">收費價格</div>
+                        <ul>
+                            <li>每小時200元</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reserveFlow" id="section02">
+            <div class="reserveBg"></div>
+            <div class="reserveBackground">
+                <div class="reserveTitle">預約流程</div>
+                <div class="reserveProcess">
+                    <div class="reserveStep"><img src="./pics/icon/icon21選擇時段地點.png" alt="">選擇時段、地點</div>
+                    <div class="reserveArrow"><img src="./pics/reserveArrow.png" alt=""></div>
+                    <div class="reserveStep"><img src="./pics/icon/icon22選擇場所.png" alt="">選擇場所</div>
+                    <div class="reserveArrow"><img src="./pics/reserveArrow.png" alt=""></div>
+                    <div class="reserveStep"><img src="./pics/icon/icon23填寫申請表.png" alt="">填寫申請表</div>
+                    <div class="reserveArrow"><img src="./pics/reserveArrow.png" alt=""></div>
+                    <div class="reserveStep"><img src="./pics/icon/icon24預約完成.png" alt="">預約完成</div>
+
+                </div>
+                <div class="reserveButton aButton"><a href="./reservepage.html">立即預約</a></div>
+            </div>
+        </div>
+        <div class="locantionIntro" id="section03">
+            <div class="locationBg"></div>
+                <div class="locationTitle">臨托場所介紹</div>
+                <div class="locationSlide">
+                    <div class="locationBlock">
+                        <div class="locationPlace modal-button" href='#myModal1'>
+                            <div class="locationPic"><img src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt=""
+                                    class="modal-button" href='#myModal1'>
+                            </div>
+                            <div class="locationInfo modal-button" href='#myModal1'>
+                                <ul class="modal-button" href='#myModal1'>
+                                    <li class="modal-button" href='#myModal1'><img src="./pics/icon/icon94場所.svg"
+                                            alt="">臺北市私立永信幼兒園</li>
+                                    <li class="modal-button" href='#myModal1'><img src="./pics/icon/icon95地址.svg"
+                                            alt="">臺北市大安區潮州街80號</li>
+                                    <li class="modal-button" href='#myModal1'>
+                                        寶貝孩子的第一所幼兒園，我們擁有舒適安全的環境及合格嚴謹的師資，提供寶貝最優質的幼兒園 ⋯⋯
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="shiningGif">
+                            <div class="gifRegion"></div>
+                        </div>
+                    </div>
+                    <div class="locationBlock">
+                        <div class="shiningGif">
+                            <div class="gifRegion"></div>
+                        </div>
+                        <div class="locationPlace locationTrigger modal-button " href='#myModal2'>
+                            <div class="locationPic"><img src="./pics/kindergardenphotos/2/kindegarden0202.jpg" alt=""
+                                    class="modal-button " href='#myModal2'>
+                            </div>
+                            <div class="locationInfo modal-button " href='#myModal2'>
+                                <ul class="modal-button " href='#myModal2'>
+                                    <li class="modal-button " href='#myModal2'><img src="./pics/icon/icon94場所.svg"
+                                            alt="">臺北市私立康橋幼兒園</li>
+                                    <li class="modal-button " href='#myModal2'><img src="./pics/icon/icon95地址.svg"
+                                            alt="">臺北市中山區敬業一路16號</li>
+                                    <li class="modal-button " href='#myModal2'>
+                                        這是一個將理論與實務融合的園所；專業幼保的示範情境尊重幼兒發展的幼兒園，為幼兒準備的 ⋯⋯
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="locationBlock">
+                        <div class="locationPlace modal-button " href='#myModal3'>
+                            <div class="locationPic"><img src="./pics/kindergardenphotos/3/kindegarden0302.jpg" alt=""
+                                    class="modal-button " href='#myModal3'></div>
+                            <div class="locationInfo modal-button " href='#myModal3'>
+                                <ul class="modal-button " href='#myModal3'>
+                                    <li class="modal-button " href='#myModal3'><img src="./pics/icon/icon94場所.svg"
+                                            alt="">臺北市私立育全幼兒園</li>
+                                    <li class="modal-button " href='#myModal3'><img src="./pics/icon/icon95地址.svg"
+                                            alt="">臺北市內湖區東湖路26號</li>
+                                    <li class="modal-button " href='#myModal3'>
+                                        因應社會發展實際需求，我們將提升幼兒學習素質，並於遊戲與學習中，培養孩子全方位的學習智
+                                        ⋯⋯</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="shiningGif">
+                            <div class="gifRegion"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="locationButton aButton"><a href="./locationlist.html">查看更多</a></div>
+        </div>
+        <div class="aboutUs" id="section04">
+            <p class="aboutTitle">關於我們</p>
+            <p class="aboutContent">藉由提供安心的托育場所媒合，<br><br>讓家長放心將孩童交給專業人員協助照顧。</p>
+            <div class="treeGif">
+                <div class="leftTree">
+                    <img src="./pics/gif/tree1Gif.gif" alt="">
+                    <img src="./pics/gif/tree2Gif.gif" alt="" class="putDown">
+                    <img src="./pics/gif/tree1Gif.gif" alt="" class="showTree">
+                </div>
+                <div class="rightTree">
+                    <img src="./pics/gif/tree1Gif.gif" alt="" class="showTree">
+                    <img src="./pics/gif/tree2Gif.gif" alt="" class="putDown">
+                    <img src="./pics/gif/tree1Gif.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerUp">
+            <div class="footericon"><a href="./index.html"><img src="./pics/icon/footerLOGO.png" alt=""></a></div>
+            <div class="footerInfo">
+                <ul>
+                    <li><img src="./pics/icon/icon91地址.png" alt="">台北市大安區基隆路1767號</li>
+                    <li><img src="./pics/icon/icon92電話.png" alt="">02-6472-8112</li>
+                    <li><img src="./pics/icon/icon93信箱.png" alt="">funbaby123@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="./index.html/#section01">服務規定</a></li>
+
+                    <li><a href="./index.html/#section03">臨托場所</a></li>
+
+                    <li><a href="./loginbox.html">會員資料</a></li>
+                    <li><a href="./index.html/#section02">立即預約</a></li>
+                    <li><a href="./index.html/#section04">關於我們</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerDown">Copyright &copy; 版權所有. All rights reserved.funbaby123 </div>
+    </div>
+
+    <!-- The Modal -->
+
+    <!-- The Modal -->
+    <div id="myModal1" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="upperPart">
+                    <div class="picChange">
+                        <table width="690" align="center">
+                            <tr>
+                                <td align="center"><img src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="" class="modalImage" id="Image1"
+                                        onClick="MM_swapImage('show','','pics/kindergardenphotos/1/kindegarden0101.jpg',1)"></td>
+                                <td rowspan="3">
+                                    <img width="100%" id="show" class="showPic" src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="" >
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="center"><img src="./pics/kindergardenphotos/1/kindegarden0102.jpg" alt="" class="modalImage" id="Image2"
+                                        onClick="MM_swapImage('show','','pics/kindergardenphotos/1/kindegarden0102.jpg',1)"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"><img src="./pics/kindergardenphotos/1/kindegarden0103.jpg" alt="" class="modalImage" id="Image3"
+                                        onClick="MM_swapImage('show','','pics/kindergardenphotos/1/kindegarden0103.jpg',1)"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="locationInfos">
+                        <ul>
+                            <li><img src="./pics/icon/icon94場所.svg" alt="">臺北市私立永信幼兒園</li>
+                            <li><img src="./pics/icon/icon95地址.svg" alt="">臺北市大安區潮州街80號</li>
+                            <li><img src="./pics/icon/icon92電話.svg" alt="">02-2321-3530</li>
+                            <li><img src="./pics/icon/icon93信箱.svg" alt="">xexaholo486@gmail.com</li>
+                        </ul>
+                        <p>寶貝孩子的第一所幼兒園，我們擁有舒適安全的環境及合格嚴謹的師資，提供寶貝最優質的幼兒園生活，期待您的加入！</p>
+                    </div>
+                </div>
+                <div class="lowerPart">
+                    <div class="teacherCard">
+                        麗華老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher01.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧新竹師範學院幼教系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">‧合格幼教老師
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    <ul>
+                                        <li>‧幼稚園教師合格證</li>
+                                        <li>‧保母人員技術士證照</li>
+                                        <li>‧幼兒園園長專業訓練班結業</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        小禎老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher02.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧明新科技大學幼兒保育系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    ‧合格教保老師
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    ‧保母人員技術士證照
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        小凱老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher03.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧國立台中師範學院幼教系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧多年幼教經驗</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    ‧幼稚園教師合格證
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        彩彩老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher04.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧長庚科技大學幼兒保育系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧多年幼教經驗</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    ‧保母人員技術士證照
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="upperPart">
+                    <div class="picChange">
+                        <table width="690" align="center">
+                            <tr>
+                                <td align="center"><img src="./pics/kindergardenphotos/2/kindegarden0201.jpg" alt="" class="modalImage" id="Image4"
+                                        onClick="MM_swapImage('show2','','pics/kindergardenphotos/2/kindegarden0201.jpg',1)"></td>
+                                <td rowspan="3">
+                                    <img width="100%" id="show2" class="showPic" src="./pics/kindergardenphotos/2/kindegarden0201.jpg" alt="">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="center"><img src="./pics/kindergardenphotos/2/kindegarden0202.jpg" alt="" class="modalImage" id="Image5"
+                                        onClick="MM_swapImage('show2','','pics/kindergardenphotos/2/kindegarden0202.jpg',1)"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"><img src="./pics/kindergardenphotos/2/kindegarden0203.jpg" alt="" class="modalImage" id="Image6"
+                                        onClick="MM_swapImage('show2','','pics/kindergardenphotos/2/kindegarden0203.jpg',1)"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="locationInfos">
+                        <ul>
+                            <li><img src="./pics/icon/icon94場所.svg" alt="">臺北市私立史萊姆幼兒園</li>
+                            <li><img src="./pics/icon/icon95地址.svg" alt="">臺北市大安區新生南路31號</li>
+                            <li><img src="./pics/icon/icon92電話.svg" alt="">02-23809847</li>
+                            <li><img src="./pics/icon/icon93信箱.svg" alt="">hacahije5036@gmail.com</li>
+                        </ul>
+                        <p>宏偉建築、飄揚彩帶及大型遊具是我們的招牌標誌。我們提供孩子百坪戶外活動園地及明亮整潔的室內學習空間，更有專業親切的師資團隊陪伴寶貝成長。</p>
+                    </div>
+                </div>
+                <div class="lowerPart">
+                    <div class="teacherCard">
+                        芊芊老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher05.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧明新科技大學幼兒保育系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧豐富教學經驗</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">‧保母人員技術士證照
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        瑞克老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher10.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧新竹師範學院幼教系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">‧合格教保老師
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">‧保母人員技術士證照
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        怡靜老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher06.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧新竹師範學院幼教系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    ‧合格教保老師
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    <ul>
+                                        <li>‧幼稚園教師合格證</li>
+                                        <li>‧合格保母證照</li>
+                                        <li>‧幼兒園園長專業訓練班結業</li>
+                                    </ul>
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        美汶老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher18.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧經國管理暨健康學院幼兒保育系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧多年幼教經驗</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    ‧幼稚園教師合格證
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal3" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="upperPart">
+                    <div class="picChange">
+                        <table width="690" align="center">
+                            <tr>
+                                <td align="center"><img src="./pics/kindergardenphotos/3/kindegarden0301.jpg" alt="" class="modalImage" id="Image7"
+                                        onClick="MM_swapImage('show3','','pics/kindergardenphotos/3/kindegarden0301.jpg',1)"></td>
+                                <td rowspan="3">
+                                    <img width="100%" id="show3" class="showPic" src="./pics/kindergardenphotos/3/kindegarden0301.jpg" alt="">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td align="center"><img src="./pics/kindergardenphotos/3/kindegarden0302.jpg" alt="" class="modalImage" id="Image8"
+                                        onClick="MM_swapImage('show3','','pics/kindergardenphotos/3/kindegarden0302.jpg',1)"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"><img src="./pics/kindergardenphotos/3/kindegarden0303.jpg" alt="" class="modalImage" id="Image9"
+                                        onClick="MM_swapImage('show3','','pics/kindergardenphotos/3/kindegarden0303.jpg',1)"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="locationInfos">
+                        <ul>
+                            <li><img src="./pics/icon/icon94場所.svg" alt="">臺北市私立立夏幼兒園</li>
+                            <li><img src="./pics/icon/icon95地址.svg" alt="">臺北市大安區永康街471號</li>
+                            <li><img src="./pics/icon/icon92電話.svg" alt="">02-2220-1939</li>
+                            <li><img src="./pics/icon/icon93信箱.svg" alt="">summerschool809@gmail.com</li>
+                        </ul>
+                        <p>我們本著幼兒發展，安排多元化的教學活動，採用主題教學及角落學習，引導孩子主動學習，並培養解決問題的能力；同時深耕親子共讀，讓孩子的童年在繪本故事中開展。願以我們的努力和熱誠，讓每個幼兒都能在安全、溫馨、快樂的環境中成長。</p>
+                    </div>
+                </div>
+                <div class="lowerPart">
+                    <div class="teacherCard">
+                        雅凌老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher08.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧弘光科技大學幼兒保育系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt=""> 
+                                    <ul>
+                                        <li>‧合格幼保科中等教師</li>
+                                        <li>‧合格教保老師</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">幼兒園園長專業訓練班結業
+                                   
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        小欣老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher09.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧長庚科技大學幼兒保育系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧多年幼教經驗</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    ‧保母人員技術士證照
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        文謙老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher10.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧實踐大學幼稚園教育學程
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧豐富幼教經驗</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧幼兒園園長專業訓練班結業</li>
+                                    </ul>
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="teacherCard">
+                        敏皓老師<br>
+                        <img id="teacherPic" src="./pics/teachers/teacher07.svg" alt="">
+                        <div class="teacherInfo">
+                            <ul>
+                                <li>
+                                    <img src="./pics/icon/icon71學士帽.svg" alt="">‧明新科技大學幼兒保育系
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon72公事包.svg" alt="">
+                                    <ul>
+                                        <li>‧合格教保老師</li>
+                                        <li>‧豐富幼教經驗</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="./pics/icon/icon73證照.svg" alt="">
+                                    <ul>
+                                        <li>‧合格保母證照</li>
+                                        <li>‧幼兒園園長專業訓練班結業</li>
+                                    </ul>
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="./js/testmodal.js"></script> -->
+
+    <script>
+        const locationBox = document.querySelectorAll('.locationPlace');
+        const locationSlide = document.querySelector('.locationTrigger');
+        function boxIn() {
+            const slideInY = locationSlide.offsetTop + 1500;
+            if (window.scrollY > slideInY) {
+                locationBox[0].classList.add('move');
+                locationBox[1].classList.add('moveL');
+                locationBox[2].classList.add('move');
+            } else {
+                locationBox[0].classList.remove('move');
+                locationBox[1].classList.remove('moveL');
+                locationBox[2].classList.remove('move');
+            }
+        }
+
+
+        window.addEventListener('scroll', boxIn);
+    </script>
+</body>
+
+</html>

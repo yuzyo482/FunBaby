@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報名表</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/registrationpage.css">
+    <script>
+        function newData() {
+            var databoxList = document.querySelectorAll(".hideBox");
+            var databox = databoxList[0];
+            databox.classList.remove("hideBox");
+            databox.classList.add("showBox");
+            var showList = document.querySelectorAll(".showBox");
+            var plusImg = document.getElementById("plusButton");
+            if (showList.length == 5){
+                plusImg.classList.add("hideBox");
+            }
+        }
+        function deleteForm() {
+            var showboxList = document.querySelectorAll(".showBox");
+            var showbox = showboxList[(showboxList.length - 1)];
+            showbox.classList.remove("showBox");
+            showbox.classList.add("hideBox");
+            var showList = document.querySelectorAll(".showBox");
+            var plusImg = document.getElementById("plusButton");
+            if (showList.length < 5){
+                plusImg.classList.remove("hideBox");
+            }
+        }
+
+    </script>
+    <script>
+        $.get("navbar.html", function (data) {
+            $(".header").html(data);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header"></div>
+
+    <div class="container">
+        <div class="navAddress">首頁 > 立即預約 > 選擇預約時段以及地點 > 選擇場所 > 填寫報名表</div>
+        <div class="registrationForm">填寫報名表
+            <div class="registrationBox">
+                <div class="reTitle">孩童資料</div>
+                <div class="reTypeInput">
+                    <ul>
+                        <li>孩童姓名
+                            <input type="text" placeholder="請輸入姓名">
+                        </li>
+                        <li>性別
+                            <select name="gender" id="gender">
+                                <option value="0">請選擇性別</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </li>
+                        <li>出生年月日
+                            <input type="text" placeholder="出生年月日(西元)">
+                        </li>
+                        <li>身分證字號
+                            <input type="text" placeholder="請輸入身份證字號">
+                        </li>
+                        <li class="otherNotice">其他注意事項
+                            <textarea name="" id="notice" cols="20" rows="4" placeholder="例：過敏原"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='例：過敏原'"></textarea>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="registrationBox hideBox">
+                <div class="reTitle">孩童資料</div>
+                <div class="reTypeInput">
+                    <ul>
+                        <li>孩童姓名
+                            <input type="text" placeholder="請輸入姓名">
+                        </li>
+                        <li>性別
+                            <select name="gender" id="gender">
+                                <option value="0">請選擇性別</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </li>
+                        <li>出生年月日
+                            <input type="text" placeholder="出生年月日(西元)">
+                        </li>
+                        <li>身分證字號
+                            <input type="text" placeholder="請輸入身份證字號">
+                        </li>
+                        <li class="otherNotice">其他注意事項
+                            <textarea name="" id="notice" cols="20" rows="4" placeholder="例：過敏原"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='例：過敏原'"></textarea>
+                        </li>
+                        <button class="deleteForm" onclick="deleteForm()">移除</button>
+                    </ul>
+                </div>
+            </div>
+            <div class="registrationBox hideBox">
+                <div class="reTitle">孩童資料</div>
+                <div class="reTypeInput">
+                    <ul>
+                        <li>孩童姓名
+                            <input type="text" placeholder="請輸入姓名">
+                        </li>
+                        <li>性別
+                            <select name="gender" id="gender">
+                                <option value="0">請選擇性別</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </li>
+                        <li>出生年月日
+                            <input type="text" placeholder="出生年月日(西元)">
+                        </li>
+                        <li>身分證字號
+                            <input type="text" placeholder="請輸入身份證字號">
+                        </li>
+                        <li class="otherNotice">其他注意事項
+                            <textarea name="" id="notice" cols="20" rows="4" placeholder="例：過敏原"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='例：過敏原'"></textarea>
+                        </li>
+                        <button class="deleteForm" onclick="deleteForm()">移除</button>
+                    </ul>
+                </div>
+            </div>
+            <div class="registrationBox hideBox">
+                <div class="reTitle">孩童資料</div>
+                <div class="reTypeInput">
+                    <ul>
+                        <li>孩童姓名
+                            <input type="text" placeholder="請輸入姓名">
+                        </li>
+                        <li>性別
+                            <select name="gender" id="gender">
+                                <option value="0">請選擇性別</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </li>
+                        <li>出生年月日
+                            <input type="text" placeholder="出生年月日(西元)">
+                        </li>
+                        <li>身分證字號
+                            <input type="text" placeholder="請輸入身份證字號">
+                        </li>
+                        <li class="otherNotice">其他注意事項
+                            <textarea name="" id="notice" cols="20" rows="4" placeholder="例：過敏原"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='例：過敏原'"></textarea>
+                        </li>
+                        <button class="deleteForm" onclick="deleteForm()">移除</button>
+                    </ul>
+                </div>
+            </div>
+            <div class="registrationBox hideBox">
+                <div class="reTitle">孩童資料</div>
+                <div class="reTypeInput">
+                    <ul>
+                        <li>孩童姓名
+                            <input type="text" placeholder="請輸入姓名">
+                        </li>
+                        <li>性別
+                            <select name="gender" id="gender">
+                                <option value="0">請選擇性別</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </li>
+                        <li>出生年月日
+                            <input type="text" placeholder="出生年月日(西元)">
+                        </li>
+                        <li>身分證字號
+                            <input type="text" placeholder="請輸入身份證字號">
+                        </li>
+                        <li class="otherNotice">其他注意事項
+                            <textarea name="" id="notice" cols="20" rows="4" placeholder="例：過敏原"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='例：過敏原'"></textarea>
+                        </li>
+                        <button class="deleteForm" onclick="deleteForm()">移除</button>
+                    </ul>
+                </div>
+            </div>
+            <div class="registrationBox hideBox">
+                <div class="reTitle">孩童資料</div>
+                <div class="reTypeInput">
+                    <ul>
+                        <li>孩童姓名
+                            <input type="text" placeholder="請輸入姓名">
+                        </li>
+                        <li>性別
+                            <select name="gender" id="gender">
+                                <option value="0">請選擇性別</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </li>
+                        <li>出生年月日
+                            <input type="text" placeholder="出生年月日(西元)">
+                        </li>
+                        <li>身分證字號
+                            <input type="text" placeholder="請輸入身份證字號">
+                        </li>
+                        <li class="otherNotice">其他注意事項
+                            <textarea name="" id="notice" cols="20" rows="4" placeholder="例：過敏原"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='例：過敏原'"></textarea>
+                        </li>
+                        <button class="deleteForm" onclick="deleteForm()">移除</button>
+                    </ul>
+                </div>
+            </div>
+            <div class="plusButton" id="plusButton"><img src="./pics/icon/icon98新增資料.svg" alt="" onclick="newData()"></div>
+            <div class="foot">
+                <div class="cancel"><a onclick="history.back()">取消</a></div>
+                <div class="next"><a href="./registrationPRpage.html">下一步</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+        reserved.funbaby123</div>
+
+</body>
+
+</html>

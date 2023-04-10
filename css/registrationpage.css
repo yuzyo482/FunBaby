@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 源泉圓體;
+    font-weight: 500;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F0F0EB;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    background-color: #F0F0EB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0;
+    border-bottom: 7px solid #86B5A7;
+    /* position: fixed;
+    z-index: 99; */
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    margin-right: 408px;
+}
+
+.navbar img {
+    width: 56px;
+    height: 56px;
+    padding: 0 10px 8px 10px;
+}
+
+.navbar li {
+    float: left;
+    border-right: 5px #DCE6D7 solid;
+}
+
+.navbar li:last-child {
+    border-right: none;
+}
+
+.navbar li a {
+    display: flex;
+    margin: 0 25px;
+    flex-direction: column;
+    color: #465A5A;
+    justify-content: end;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#nav01 {
+    background-image: url('../pics/icon/icon01服務規定.svg');
+}
+
+#nav01:hover {
+    background-image: url('../pics/icon/icon01服務規定hover.svg');
+}
+
+#nav02 {
+    background-image: url('../pics/icon/icon02立即預約.svg');
+}
+
+#nav02:hover {
+    background-image: url('../pics/icon/icon02立即預約hover.svg');
+}
+
+#nav03 {
+    background-image: url('../pics/icon/icon03場所介紹.svg');
+}
+
+#nav03:hover {
+    background-image: url('../pics/icon/icon03場所介紹hover.svg');
+}
+
+#nav04 {
+    background-image: url('../pics/icon/icon04關於我們.svg');
+}
+
+#nav04:hover {
+    background-image: url('../pics/icon/icon04關於我們hover.svg');
+}
+
+#nav00 {
+    background-image: url('../pics/icon/icon00會員資料.svg');
+}
+
+#nav00:hover {
+    background-image: url('../pics/icon/icon00會員資料hover.svg');
+}
+
+.navbar li:last-child a {
+    margin-right: 0px;
+}
+
+
+.container {
+    margin: auto;
+    width: 1440px;
+}
+
+/* navAddress */
+.navAddress {
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    color: #465A5A;
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* main */
+.registrationForm {
+    /* border: 1px red solid; */
+    width: 550px;
+    margin: 0 auto;
+    padding: 80px 0;
+    font-size: 36px;
+    color: #465A5A;
+    font-weight: 700;
+}
+
+.registrationBox {
+    /* border: 1px solid red ; */
+    width: 550px;
+    /* height: 704px; */
+    overflow: hidden;
+    background-color: #FAFAFA;
+    border-radius: 80px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.reTitle {
+    width: 400px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.reTypeInput {
+    width: 400px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.reTypeInput li {
+    width: 400px;
+    height: 56px;
+    line-height: 56px;
+    padding-top: 30px;
+    text-align: left;
+}
+
+.reTypeInput li.otherNotice {
+    padding-bottom: 50px;
+}
+
+.reTypeInput li:last-child {
+    margin-bottom: 30px;
+}
+
+
+
+.reTypeInput input,
+.reTypeInput select,
+.reTypeInput textarea {
+    float: right;
+    width: 220px;
+    height: 56px;
+    font-size: 20px;
+    background-color: #DCE6D7;
+    color: #465A5A;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.reTypeInput select {
+    width: 240px;
+}
+
+#notice {
+    width: 200px;
+    height: 102px;
+    resize: none;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.reTypeInput a {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 56px;
+    border-radius: 20px;
+    color: #FAFAFA;
+    background-color: #86B5A7;
+    padding-left: 20px;
+}
+
+button.deleteForm {
+    width: 390px;
+    height: 56px;
+    line-height: 56px;
+    display: block;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    background-color: #86B5A7;
+    color: #FAFAFA;
+    font-size: 20px;
+}
+
+.plusButton img {
+    margin-top: 30px;
+}
+
+.foot {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 10px;
+    justify-content: space-between;
+}
+
+.cancel,
+.next {
+    width: 250px;
+    height: 82px;
+    border-radius: 30px;
+}
+
+.cancel {
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    border: 2px #86B5A7 solid;
+}
+
+.cancel a,
+.next a {
+    display: block;
+    height: 82px;
+    line-height: 82px;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.cancel a {
+    color: #86B5A7;
+    border-radius: 20px;
+}
+
+.next {
+    background: #86B5A7;
+}
+
+.next a {
+    color: #FAFAFA;
+}
+
+.hideBox {
+    display: none;
+}
+
+/* footer */
+.footer {
+    width: 1440px;
+    height: 90px;
+    margin: 0 auto;
+    /* line-height: 60px; */
+    background-color: #DCE6D7;
+    color: #86B5A7;
+    line-height: 90px;
+}
+
+.footer img {
+    width: 60px;
+    height: 60px;
+    /* padding-top: 15px; */
+    /* padding-left: 445px; */
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+@media (min-width:1440px) {
+    .container {
+        width: 1920px;
+    }
+
+    .navAddress {
+        padding-left: 124px;
+    }
+
+    .footer {
+        width: 1920px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        width: 375px;
+    }
+
+    .navAddress {
+        display: none;
+    }
+
+    .registrationForm {
+        width: 375px;
+        margin: 0 auto;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .registrationBox {
+        width: 280px;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    
+    .reTitle {
+        width: 280px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 12px;
+        margin: 0 auto;
+    }
+    
+    .reTypeInput {
+        width: 220px;
+        font-size: 12px;
+        margin: 0 auto;
+    }
+    
+    .reTypeInput li {
+        width: 220px;
+        height: 24px;
+        line-height: 24px;
+        padding-top: 10px;
+        text-align: left;
+    }
+    
+    .reTypeInput li.otherNotice {
+        padding-bottom: 50px;
+    }
+    
+    .reTypeInput li:last-child {
+        margin-bottom: 30px;
+    }
+    
+    .reTypeInput input,
+    .reTypeInput select,
+    .reTypeInput textarea {
+        float: right;
+        width: 120px;
+        height: 24px;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .reTypeInput select {
+        width: 130px;
+    }
+    
+    #notice {
+        width: 190px;
+        height: 102px;
+    }
+    
+    .reTypeInput a {
+        display: block;
+        float: left;
+        width: 120px;
+        height: 56px;
+        border-radius: 20px;
+        background-color: #86B5A7;
+        padding-left: 20px;
+    }
+    
+    button.deleteForm {
+        width: 200px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    
+    .plusButton img {
+        margin-top: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .foot {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        justify-content: space-evenly;
+    }
+    
+    .cancel,
+    .next {
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    
+    .cancel a,
+    .next a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    .footer {
+        width: 375px;
+        height: 160px;
+        padding-top: 24px;
+        font-size: 10px;
+    }
+    
+}

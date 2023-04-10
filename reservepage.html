@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇預約時段以及地點</title>
+    <link rel="stylesheet" href="./css/reservepage.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./js/datepicker-zh-TW.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.js"></script>
+    <link rel="stylesheet" href="./css/timepicker.css">
+    <link rel="stylesheet" href="./css/jquery-ui.theme.css">
+    <script src="./js/designSelect.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker($.datepicker.regional["zh-TW"]);
+            $("#datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+            });
+            $(".timepicker").timepicker({
+                timeFormat: "HH:mm", // 時間隔式
+                interval: 30, //時間間隔
+                startTime: "09:00", // 開始時間
+                minTime: "09",
+                maxTime: "15",
+                defaultTime: "9",
+                dynamic: false, //是否顯示項目，使第一個項目按時間順序緊接在所選時間之後
+                dropdown: true, //是否顯示時間條目的下拉列表
+                scrollbar: false, //是否顯示捲軸
+            });
+        });
+
+    </script>
+    <script>
+        $.get("navbar.html", function (data) {
+            $(".header").html(data);
+        })
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+
+    <div class="container">
+        <div class="navAddress">首頁 > 立即預約 > 選擇預約時段以及地點</div>
+        <div class="main">
+            <div class="chooseForm">
+                選擇預約時段以及地點
+                <div class="theDate formDesign">
+                    <img src="./pics/icon/icon89日期.svg" alt="">
+                    <input type="text" id="datepicker" class="datepicker">
+                </div>
+                <div class="theTime formDesign">
+                    <div class="timeTable">
+                        <span>開始時間</span><span style="display: none;">結束時間</span>
+                        <hr class="hrTable">
+                        <div class="timeOptionTable">
+                            <button class="timeOptions" value="09:00" onclick="chooseTimePeriod(this)">09:00</button>
+                            <button class="timeOptions" value="09:30" onclick="chooseTimePeriod(this)">09:30</button>
+                            <button class="timeOptions" value="10:00" onclick="chooseTimePeriod(this)">10:00</button>
+                            <button class="timeOptions" value="10:30" onclick="chooseTimePeriod(this)">10:30</button>
+                            <button class="timeOptions" value="11:00" onclick="chooseTimePeriod(this)">11:00</button>
+                            <button class="timeOptions" value="11:30" onclick="chooseTimePeriod(this)">11:30</button>
+                            <button class="timeOptions" value="12:00" onclick="chooseTimePeriod(this)">12:00</button>
+                            <button class="timeOptions" value="12:30" onclick="chooseTimePeriod(this)">12:30</button>
+                            <button class="timeOptions" value="13:00" onclick="chooseTimePeriod(this)">13:00</button>
+                            <button class="timeOptions" value="13:30" onclick="chooseTimePeriod(this)">13:30</button>
+                            <button class="timeOptions" value="14:00" onclick="chooseTimePeriod(this)">14:00</button>
+                            <button class="timeOptions" value="14:30" onclick="chooseTimePeriod(this)">14:30</button>
+                            <button class="timeOptions" value="15:00" onclick="chooseTimePeriod(this)">15:00</button>
+                            <button class="timeOptions" value="15:30" onclick="chooseTimePeriod(this)">15:30</button>
+                            <button class="timeOptions" value="16:00" onclick="chooseTimePeriod(this)">16:00</button>
+                            <button class="timeOptions" value="16:30" onclick="chooseTimePeriod(this)">16:30</button>
+                            <button class="timeOptions" value="17:00" onclick="chooseTimePeriod(this)">17:00</button>
+                            <button class="timeOptions" value="17:30" onclick="chooseTimePeriod(this)">17:30</button>
+                            <button class="timeOptions" value="18:00" onclick="chooseTimePeriod(this)">18:00</button>
+                            <button class="timePickSure" onclick="saveTimePeriod()">確定</button>
+                        </div>
+                    </div>
+                    <img src="./pics/icon/icon88時間.svg" alt="">
+                    <button id="timeChoose" onclick="timeChoose()">選擇時間</button>
+                </div>
+                <div class="theLocation formDesign">
+                    <div class="locationTable">
+                        選擇地點
+                        <hr class="hrTable">
+                        <div class="locationOptionTable">
+                            <button class="locationOptions" onclick="chooseLocation(this)" value="1">大安區</button>
+                            <button class="locationOptions" onclick="chooseLocation(this)" value="2">中山區</button>
+                            <button class="locationOptions" onclick="chooseLocation(this)" value="3">內湖區</button>
+                            <button class="locationOptions" onclick="chooseLocation(this)" value="4">松山區</button>
+                        </div>
+                    </div>
+                    <img src="./pics/icon/icon95地址.svg" alt="">
+                    <button id="locationChoose" onclick="locationChoose()" value="0">選擇地點</button>
+                </div>
+                <div class="thePeople formDesign">
+                    <div class="peopleTable">
+                        選擇人數
+                        <hr class="hrTable">
+                        <div class="peopleOptionTable">
+                            <button class="peopleOptions" onclick="choosePeople(this)" value="1">1</button>
+                            <button class="peopleOptions" onclick="choosePeople(this)" value="2">2</button>
+                            <button class="peopleOptions" onclick="choosePeople(this)" value="3">3</button>
+                            <button class="peopleOptions" onclick="choosePeople(this)" value="4">4</button>
+                            <button class="peopleOptions" onclick="choosePeople(this)" value="5">5</button>
+                            <button class="peopleOptions" onclick="choosePeople(this)" value="6">6</button>
+                        </div>
+                    </div>
+                    <img src="./pics/icon/icon87人數.svg" alt="">
+                    <button id="peopleChoose" onclick="peopleChoose()">選擇人數</button>
+                </div>
+                <div class="yesnoButton">
+                    <div class="cancel"><a href="#">取消</a></div>
+                    <div class="reserving"><a href="./reservelocationpage.html" onclick="passVal()">預約</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+        reserved.funbaby123
+    </div>
+
+    <script>
+        function passVal() {
+            const datePick = document.getElementById('datepicker').value;
+            const timePick = document.getElementById('timeChoose').innerHTML;
+            const locationContent = document.getElementById('locationChoose').innerHTML;
+            const peopleContent = document.getElementById('peopleChoose').innerText;
+            const locationPick = document.getElementById('locationChoose').value;
+            const peoplePick = document.getElementById('peopleChoose').value;
+
+            localStorage.setItem("dateValue", datePick);
+            localStorage.setItem("timeValue", timePick);
+            localStorage.setItem("locationContent", locationContent);
+            localStorage.setItem("peopleContent", peopleContent);
+            localStorage.setItem("locationValue", locationPick);
+            localStorage.setItem("peopleValue", peoplePick);
+        }
+    </script>
+    <script src="./js/optionchoose.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 源泉圓體;
+    font-weight: 500;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F0F0EB;
+    margin: 0 auto;
+    text-align: center;
+    color: #465A5A;
+}
+
+.signInMain{
+    width: 560px;
+    height: 546px;
+    background-color: #FAFAFA;
+    border-radius: 80px;
+    margin: 120px auto;
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.signInTitle{
+    width: 400px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #465a5a;
+    margin: 0 auto;
+}
+
+.signInOk img{
+    margin: 30px auto;
+}
+
+/* footer */
+.footer {
+    width: 1440px;
+    height: 90px;
+    margin: 0 auto;
+    /* line-height: 60px; */
+    background-color: #DCE6D7;
+    color: #86B5A7;
+    line-height: 90px;
+}
+
+.footer img {
+    width: 60px;
+    height: 60px;
+    /* padding-top: 15px; */
+    /* padding-left: 445px; */
+    margin-right: 20px;
+    vertical-align: middle;
+}

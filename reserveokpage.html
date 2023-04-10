@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完成預約</title>
+    <link rel="stylesheet" href="./css/reserveokpage.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $.get("navbar.html",function(data){
+            $(".header").html(data);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header"></div>
+
+    <div class="container">
+        <div class="navAddress">首頁 > 立即預約 > 選擇預約時段以及地點 > 選擇場所 > 填寫報名表 > 預約完成</div>
+        <div class="main">
+            <div class="complete">
+                <img src="./pics/icon/icon99完成.svg" alt=""><br>預約完成<br>
+                托育機構人員將會立即與您聯繫
+            </div>
+            <div class="check"><a href="./accountpage.html">查看</a></div>
+        </div>
+    </div>
+    <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+        reserved.funbaby123</div>
+</body>
+
+</html>

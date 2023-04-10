@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 源泉圓體;
+    font-weight: 500;
+    color: #465a5a;
+}
+
+
+body {
+    background-color: #F0F0EB;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-modal-content {
+    /* background-color: #fefefe; */
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 500px; /* Could be more or less, depending on screen size */
+  }
+
+.loginMain{
+    width: 560px;
+    height: 708px;
+    background-color: #FAFAFA;
+    border-radius: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.loginTitle{
+    width: 400px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    border-bottom: 3px solid #465a5a;
+    margin: 0 auto;
+}
+
+.socialLogIn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 auto;
+    border-bottom: 3px solid #465a5a;
+    padding-bottom: 30px;
+}
+
+.socialLogIn p{
+    width: 400px;
+    margin: 30px 0;
+}
+.socialLogIn img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+.socialLogIn a{
+    margin-right: 53px;
+}
+.socialLogIn a:last-child{
+    margin-right: 0;
+}
+
+.or{
+    position: absolute;
+    width: 100px;
+    background-color: #FAFAFA;
+    top: 304px;
+    left: 230px;
+}
+
+
+.typeInput{
+    font-size: 20px;
+}
+
+.typeInput li{
+    height: 56px;
+    line-height: 56px;
+    padding:30px 0 0 0; 
+}
+
+.typeInput div{
+    padding:30px 0 0 0; 
+}
+
+.typeInput input{
+    width: 304px;
+    height: 56px;
+    font-size: 20px;
+    background-color: #DCE6D7;
+    color: #465a5a;
+    border: none;
+    border-radius: 20px;
+    margin-left: 36px;
+    padding-left: 20px;
+}
+
+.typeInput .forgetPassword{
+    display: inline-block;
+    width: 80px;
+    height: 56px;
+    line-height: 56px;
+}
+.typeInput .forgetPassword:hover{
+    text-decoration: underline;
+}
+
+.typeInput .login{
+    display: inline-block;
+    background-color: #86B5A7;
+    color: #FAFAFA;
+    width: 284px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 36px;
+}
+
+.typeInput li:last-child{
+    font-size: 16px;
+    color: #86B5A7;
+}
+
+.typeInput li:last-child a{
+    color: #86B5A7;
+    text-decoration: underline;
+    margin-left: 24px;
+}

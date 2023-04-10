@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 源泉圓體;
+    font-weight: 500;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F0F0EB;
+    margin: 0 auto;
+    text-align: center;
+    color: #465A5A;
+}
+
+.signInMain{
+    width: 560px;
+    height: 850px;
+    background-color: #FAFAFA;
+    border-radius: 80px;
+    margin: 120px auto;
+    position: relative;
+}
+
+.signInTitle{
+    width: 400px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    border-bottom: 3px solid #465a5a;
+    margin: 0 auto;
+}
+
+.signInInput{
+    width: 400px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.signInInput li{
+    width: 400px;
+    height: 56px;
+    line-height: 56px;
+    padding-top:30px;
+    text-align: left;
+}
+
+.signInInput input{
+    float: right;
+    width: 220px;
+    height: 56px;
+    font-size: 20px;
+    background-color: #DCE6D7;
+    color: #465a5a;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+.signInInput a{
+    display: block;
+    float: left;
+    width: 120px;
+    height: 56px;
+    border-radius: 20px;
+    color: #FAFAFA;
+    background-color: #86B5A7;
+    padding-left: 20px;
+}
+
+.signInFoot a{
+    width: 400px;
+    height: 56px;
+    font-size: 20px;
+    background-color: #86B5A7;
+    color: #FAFAFA;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 20px;
+    display: block;
+    margin: 30px auto;
+}
+
+
+/* footer */
+.footer {
+    width: 1440px;
+    height: 90px;
+    margin: 0 auto;
+    /* line-height: 60px; */
+    background-color: #DCE6D7;
+    color: #86B5A7;
+    line-height: 90px;
+}
+
+.footer img {
+    width: 60px;
+    height: 60px;
+    /* padding-top: 15px; */
+    /* padding-left: 445px; */
+    margin-right: 20px;
+    vertical-align: middle;
+}

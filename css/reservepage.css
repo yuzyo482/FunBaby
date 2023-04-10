@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 源泉圓體;
+    font-weight: 500;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F0F0EB;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    background-color: #F0F0EB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0;
+    border-bottom: 7px solid #86B5A7;
+    /* position: fixed;
+    z-index: 99; */
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    margin-right: 408px;
+}
+
+.navbar img {
+    width: 56px;
+    height: 56px;
+    padding: 0 10px 8px 10px;
+}
+
+.navbar li {
+    float: left;
+    border-right: 5px #DCE6D7 solid;
+}
+
+.navbar li:last-child {
+    border-right: none;
+}
+
+.navbar li a {
+    display: flex;
+    margin: 0 25px;
+    flex-direction: column;
+    color: #465A5A;
+    justify-content: end;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#nav01 {
+    background-image: url('../pics/icon/icon01服務規定.svg');
+}
+
+#nav01:hover {
+    background-image: url('../pics/icon/icon01服務規定hover.svg');
+}
+
+#nav02 {
+    background-image: url('../pics/icon/icon02立即預約.svg');
+}
+
+#nav02:hover {
+    background-image: url('../pics/icon/icon02立即預約hover.svg');
+}
+
+#nav03 {
+    background-image: url('../pics/icon/icon03場所介紹.svg');
+}
+
+#nav03:hover {
+    background-image: url('../pics/icon/icon03場所介紹hover.svg');
+}
+
+#nav04 {
+    background-image: url('../pics/icon/icon04關於我們.svg');
+}
+
+#nav04:hover {
+    background-image: url('../pics/icon/icon04關於我們hover.svg');
+}
+
+#nav00 {
+    background-image: url('../pics/icon/icon00會員資料.svg');
+}
+
+#nav00:hover {
+    background-image: url('../pics/icon/icon00會員資料hover.svg');
+}
+
+.navbar li:last-child a {
+    margin-right: 0px;
+}
+
+
+.container {
+    margin: auto;
+    width: 1440px;
+}
+
+/* navAddress */
+.navAddress {
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    color: #465A5A;
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* main */
+.main {
+    height: 744px;
+    color: #465A5A;
+}
+
+.chooseForm {
+    /* border: 1px red solid; */
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 80px;
+    font-size: 24px;
+}
+
+.chooseForm img {
+    vertical-align: middle;
+}
+
+.formDesign {
+    width: 280px;
+    height: 56px;
+    margin: 20px 10px;
+    border-radius: 20px;
+    background-color: #DCE6D7;
+}
+
+.theDate {
+    margin-top: 60px;
+}
+
+.theDate input,
+#timeChoose,
+#locationChoose,
+#peopleChoose,
+.chooseForm select {
+    width: 200px;
+    height: 32px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 12px;
+    color: #465A5A;
+    background-color: #DCE6D7;
+    border: none;
+}
+
+.theTime,
+.theLocation {
+    position: relative;
+}
+
+.timeTable,
+.locationTable,
+.peopleTable {
+    display: none;
+    font-size: 16px;
+    width: 260px;
+    height: 220px;
+    background-color: aqua;
+    position: absolute;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #FAFAFA;
+    z-index: 5;
+    padding-top: 16px;
+    box-shadow: 8px 3px 22px 10px rgba(150, 150, 150, 0.21);
+}
+
+.locationTable {
+    height: 168px;
+}
+
+.peopleTable {
+    height: 366px;
+}
+
+.timeOptionTable,
+.locationOptionTable,
+.peopleOptionTable {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hrTable {
+    margin-top: 16px;
+    color: #7E818C;
+}
+
+.timeOptions,
+.timePickSure {
+    width: 50px;
+    height: 22px;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    margin: 6px 7px;
+    border: none;
+}
+
+.timePickSure {
+    display: none;
+    background-color: #86B5A7;
+    color: #FAFAFA;
+    border-radius: 10px;
+}
+
+.locationOptions {
+    display: inline-block;
+    width: 120px;
+    height: 48px;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    margin: 6px 4px;
+    border: 2px solid #DCE6D7;
+}
+
+.peopleOptions {
+    display: inline-block;
+    width: 252px;
+    height: 40px;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    margin: 6px 4px;
+    border: 2px solid #DCE6D7;
+}
+
+.timeOptions:hover,
+.locationOptions:hover,
+.peopleOptions:hover {
+    background-color: #86B5A7;
+    color: #FAFAFA;
+    border: #86B5A7;
+}
+
+
+.yesnoButton {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 10px;
+    justify-content: space-between;
+}
+
+.cancel {
+    box-sizing: border-box;
+    width: 125px;
+    height: 56px;
+    border-radius: 20px;
+    background-color: #FAFAFA;
+    border: 2px #86B5A7 solid;
+}
+
+.cancel a,
+.reserving a {
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.cancel a {
+    color: #86B5A7;
+    display: block;
+    height: 54px;
+    line-height: 54px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.reserving {
+    width: 125px;
+    height: 56px;
+    border-radius: 20px;
+    background: #86B5A7;
+}
+
+.reserving a {
+    color: #FAFAFA;
+}
+
+/* footer */
+.footer {
+    width: 1440px;
+    height: 90px;
+    margin: 0 auto;
+    /* line-height: 60px; */
+    background-color: #DCE6D7;
+    color: #86B5A7;
+    line-height: 90px;
+}
+
+.footer img {
+    width: 60px;
+    height: 60px;
+    /* padding-top: 15px; */
+    /* padding-left: 445px; */
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+@media (min-width:1440px) {
+    .container {
+        width: 1920px;
+    }
+
+    .navAddress {
+        padding-left: 124px;
+    }
+
+    .footer {
+        width: 1920px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        width: 375px;
+    }
+
+    .navAddress {
+        display: none;
+    }
+
+    .chooseForm {
+        font-size: 16px;
+    }
+
+    .formDesign {
+        width: 200px;
+        height: 43px;
+        margin: 20px auto;
+
+    }
+
+    .chooseForm img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .chooseForm {
+        height: 420px;
+    }
+
+    .theDate input,
+    #timeChoose,
+    #locationChoose,
+    #peopleChoose,
+    .chooseForm select {
+        width: 140px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .timeTable,
+    .locationTable,
+    .peopleTable {
+        display: none;
+        font-size: 14px;
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 16px;
+
+    }
+
+    .locationTable {
+        height: 180px;
+    }
+
+    .peopleTable {
+        height: 256px;
+    }
+
+    .hrTable {
+        margin-top: 8px;
+        color: #7E818C;
+    }
+
+    .timeOptionTable,
+    .locationOptionTable,
+    .peopleOptionTable {
+        margin-top: 8px;
+    }
+
+    .timeOptions,
+    .timePickSure {
+        width: 30px;
+        height: 22px;
+        background-color: #FAFAFA;
+        border-radius: 10px;
+        margin: 3px 7px;
+        border: none;
+    }
+
+    .timePickSure {
+        display: none;
+        background-color: #86B5A7;
+        color: #FAFAFA;
+        border-radius: 10px;
+    }
+
+    .locationOptions {
+        display: inline-block;
+        width: 140px;
+        height: 30px;
+        background-color: #FAFAFA;
+        border-radius: 10px;
+        margin: 4px auto;
+        border: 2px solid #DCE6D7;
+    }
+
+    .peopleOptions {
+        display: inline-block;
+        width: 140px;
+        height: 30px;
+        background-color: #FAFAFA;
+        border-radius: 10px;
+        margin: 4px auto;
+        border: 2px solid #DCE6D7;
+    }
+
+    .yesnoButton {
+        margin: 40px 40px;
+    }
+
+    .cancel {
+        box-sizing: border-box;
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #FAFAFA;
+        border: 2px #86B5A7 solid;
+    }
+
+    .cancel a,
+    .reserving a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+
+    .cancel a {
+        color: #86B5A7;
+        display: block;
+        height: 38px;
+        line-height: 38px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+
+    .reserving {
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        background: #86B5A7;
+    }
+
+    .footer {
+        width: 375px;
+        height: 160px;
+        padding-top: 24px;
+        font-size: 10px;
+    }
+
+}

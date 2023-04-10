@@ -1,0 +1,91 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  #cancelModal .modal-content ,
+  #logOutModal .modal-content,
+  #logOutOk .modal-content{
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 560px; /* Could be more or less, depending on screen size */
+    height: 482px;
+    border-radius: 80px;
+  }
+  
+  .modal-body{
+    color: #465A5A;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 40px 80px;
+    line-height: 120px;
+  }
+
+  .modal-body button{
+    width: 185px;
+    height: 56px;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+  }
+
+  .modal-body a{
+    display: inline-block;
+    width: 185px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 20px;
+  }
+
+  button.yes,
+  a.yesOut{
+    margin: 0;
+    margin-right: 30px;
+    background-color: #86B5A7;
+    color: #FAFAFA;
+  }
+
+  button.no,
+  a.no{
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    color: #86B5A7;
+    border: 2px solid #86B5A7;
+  }
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .modal {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+

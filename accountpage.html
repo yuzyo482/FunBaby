@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資料頁面</title>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script>
+        $.get("navbar.html", function (data) {
+            $(".header").html(data);
+        })
+    </script>
+    <link rel="stylesheet" href="./css/accountpage.css">
+    <link rel="stylesheet" href="./css/accountmodal.css">
+</head>
+
+<body>
+    <div class="header">
+    </div>
+
+    <div class="container">
+        <!-- <div class="navAddress">首頁 > 立即預約 > 選擇預約時段以及地點 > 選擇場所</div> -->
+        <div class="main">
+            <div class="leftDiv">
+                <div class="dataForm"><span id="divTitle">
+                        基本資料</span><br><br>
+                    姓名
+                    <div class="theName formDesign">李恩玄</div>
+                    電子郵件
+                    <div class="theEmail formDesign" id="account"></div>
+                    電話號碼
+                    <div class="thePhone formDesign">0903152167</div>
+                    <div class="footButton">
+                        <div><button class="edited">修改</button></div>
+                        <div><button class="logout modal-button" href="#logOutModal">登出</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightDiv">
+                <div class="locationList">
+                    <span id="divTitle">預約紀錄</span>
+                    <table border="0" width="760" id="latestTable">
+                        <tr>
+                            <td rowspan="2">最新預約</td>
+                            <td id="topHideLine"></td>
+                        </tr>
+                        <tr>
+                            <td id="topLine"></td>
+                        </tr>
+                    </table>
+                    <div class="reservingCase">
+                        <img src="" alt="" class="locationPhoto" id="reserveLocation">
+                        <div class="locationInfo">
+                            <ul>
+                                <li ><img src="./pics/icon/icon94場所.png" alt=""><span id="reservePlace"></span></li>
+                                <li ><img src="./pics/icon/icon95地址.png" alt=""><span id="reserveAddress"></span></li>
+                                <li ><img src="./pics/icon/icon89日期.svg" alt=""><span id="reserveDate"></span></li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <button href='#cancelModal' class="cancel modal-button">取消</button>
+                        </div>
+                    </div>
+                    <table border="0" width="760">
+                        <tr>
+                            <td rowspan="2">過去一個月</td>
+                            <td id="topHideLine2"></td>
+                        </tr>
+                        <tr>
+                            <td id="topLine2"></td>
+                        </tr>
+                    </table>
+                    <div class="reservedCase">
+                        <img src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立永信幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區潮州街80號</li>
+                                <li><img src="./pics/icon/icon89日期.svg" alt="">2022/11/23 10：30</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reservedCase">
+                        <img src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立永信幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區潮州街80號</li>
+                                <li><img src="./pics/icon/icon89日期.svg" alt="">2022/11/21 13：00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reservedCase">
+                        <img src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立永信幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區潮州街80號</li>
+                                <li><img src="./pics/icon/icon89日期.svg" alt="">2022/11/17 14：00</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+        reserved.funbaby123</div>
+
+    <div id="cancelModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                取消預約
+                <hr>
+                您確定要取消此預約？<br>
+                <button href="#" class="yes">是</button><button href="" class="no">否</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="logOutModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                登出
+                <hr>
+                您確定要登出？<br>
+                <a href="#logOutOk" class="yesOut modal-button" id="yesOut">是</a><a href="" class="no">否</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="logOutOk" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                登出成功
+                <hr>
+                <img src="./pics/icon/icon97成功.png" alt=""><br>
+                您已成功登出
+            </div>
+        </div>
+    </div>
+    <script src="./js/accountmodal.js"></script>
+    <script>
+        document.getElementById('account').textContent = localStorage.getItem("account");
+        document.getElementById('reserveLocation').src = localStorage.getItem("reserveLocation");
+        document.getElementById('reservePlace').outerText = localStorage.getItem("reservePlace");
+        document.getElementById('reserveAddress').outerText = localStorage.getItem("reserveAddress");
+        document.getElementById('reserveDate').outerText = (localStorage.getItem("dateValue")+' '+localStorage.getItem("timeValue"));
+        var yesOut = document.getElementById("yesOut");
+        yesOut.addEventListener('click', function () {
+            localStorage.removeItem("account");
+            setTimeout("location.href='./index.html'", 1500);
+        });
+    </script>
+</body>
+
+</html>

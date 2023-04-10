@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臨托場所列表</title>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="./css/locationlist.css">
+    <link rel="stylesheet" href="./css/detailmodal.css">
+    <script>
+        $.get("modaldata.html",function(data){
+            $("#modalData").html(data);
+        })
+        $.get("navbar.html",function(data){
+            $(".header").html(data);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <!-- <div class="logo"><a href="./homepage.html"><img src="./pics/icon/FUN寶貝即時托育網.png" alt=""></a></div>
+        <div class="navbar">
+            <ul>
+                <li><a id="nav01" href="#section01">服務規定</a></li>
+                <li><a id="nav02" href="#section02">立即預約</a></li>
+                <li><a id="nav03" href="#section03">場所介紹</a></li>
+                <li><a id="nav04" href="#section04">關於我們</a></li>
+                <li><a id="nav00" href="./templatepage.html">會員資料</a></li>
+            </ul>
+        </div> -->
+    </div>
+
+    <div class="container">
+        <div class="navAddress">首頁 > 查看更多 > 臨托場所列表</div>
+        <div class="main">
+            <div class="mobileTitle">場所列表</div>
+            <div class="locationList">
+                <!-- 1-5 -->
+                <div class="locationCard modal-button" href='#myModal1'>
+                    <img class="modal-button" href='#myModal1' id="locationPic" src="./pics/kindergardenphotos/1/kindegarden0101.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal1'><img src="./pics/icon/icon94場所.png" alt="">台北市私立永信幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal1'><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal2'>
+                    <img class="modal-button" href='#myModal2' id="locationPic" src="./pics/kindergardenphotos/2/kindegarden0201.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal2'><img src="./pics/icon/icon94場所.png" alt="">台北市私立史萊姆幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal2'><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal3'>
+                    <img class="modal-button" href='#myModal3' id="locationPic" src="./pics/kindergardenphotos/3/kindegarden0301.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal3'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立立夏幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal3'><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal4'>
+                    <img class="modal-button" href='#myModal4' id="locationPic" src="./pics/kindergardenphotos/4/kindegarden0401.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal4'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立夏恩幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal4'><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal5'>
+                    <img class="modal-button" href='#myModal5' id="locationPic" src="./pics/kindergardenphotos/5/kindegarden0501.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal5'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立茉莉幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal5'><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區</li>
+                    </ul>
+                </div>
+                <!-- 6-10 -->
+                <div class="locationCard modal-button" href='#myModal6'>
+                    <img class="modal-button" href='#myModal6' id="locationPic" src="./pics/kindergardenphotos/6/kindegarden0601.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal6'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立琪安幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal6'><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal7'>
+                    <img class="modal-button" href='#myModal7' id="locationPic" src="./pics/kindergardenphotos/7/kindegarden0701.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal7'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立又而美幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal7'><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal8'>
+                    <img class="modal-button" href='#myModal8' id="locationPic" src="./pics/kindergardenphotos/8/kindegarden0801.jpg"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal8'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立康橋幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal8'><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal9'>
+                    <img class="modal-button" href='#myModal9' id="locationPic" src="./pics/kindergardenphotos/9/kindegarden0901.jfif"
+                        alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal9'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立愛麗絲幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal9'><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區</li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal10'>
+                    <img class="modal-button" href='#myModal10' id="locationPic"
+                        src="./pics/kindergardenphotos/10/kindegarden1001.jfif" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal10'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立巧虎幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal10'><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區
+                        </li>
+                    </ul>
+                </div>
+                <!-- 11-15 -->
+                <div class="locationCard modal-button" href='#myModal11'>
+                    <img class="modal-button" href='#myModal11' id="locationPic"
+                        src="./pics/kindergardenphotos/1/kindegarden0102.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal11'><img src="./pics/icon/icon94場所.png"
+                                alt="">臺北市私立康乃爾幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal11'><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal12'>
+                    <img class="modal-button" href='#myModal12' id="locationPic"
+                        src="./pics/kindergardenphotos/2/kindegarden0202.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal12'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立萊恩幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal12'><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal13'>
+                    <img class="modal-button" href='#myModal13' id="locationPic"
+                        src="./pics/kindergardenphotos/3/kindegarden0302.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal13'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立育全幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal13'><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal14'>
+                    <img class="modal-button" href='#myModal14' id="locationPic"
+                        src="./pics/kindergardenphotos/4/kindegarden0402.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal14'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立荷美幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal14'><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal15'>
+                    <img class="modal-button" href='#myModal15' id="locationPic"
+                        src="./pics/kindergardenphotos/5/kindegarden0502.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal15'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立馨欣幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal15'><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區
+                        </li>
+                    </ul>
+                </div>
+                <!-- 16-20 -->
+                <div class="locationCard modal-button" href='#myModal16'>
+                    <img class="modal-button" href='#myModal16' id="locationPic"
+                        src="./pics/kindergardenphotos/6/kindegarden0602.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal16'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立多莉幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal16'><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal17'>
+                    <img class="modal-button" href='#myModal17' id="locationPic"
+                        src="./pics/kindergardenphotos/7/kindegarden0702.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal17'><img src="./pics/icon/icon94場所.png"
+                                alt="">臺北市私立巧可安幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal17'><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal18'>
+                    <img class="modal-button" href='#myModal18' id="locationPic"
+                        src="./pics/kindergardenphotos/8/kindegarden0802.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal18'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立朵拉幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal18'><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal19'>
+                    <img class="modal-button" href='#myModal19' id="locationPic"
+                        src="./pics/kindergardenphotos/9/kindegarden0902.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal19'><img src="./pics/icon/icon94場所.png"
+                                alt="">臺北市私立喬治亞幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal19'><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區
+                        </li>
+                    </ul>
+                </div>
+                <div class="locationCard modal-button" href='#myModal20'>
+                    <img class="modal-button" href='#myModal20' id="locationPic"
+                        src="./pics/kindergardenphotos/10/kindegarden1002.jpg" alt="">
+                    <ul>
+                        <li class="modal-button" href='#myModal20'><img src="./pics/icon/icon94場所.png" alt="">臺北市私立多比幼兒園
+                        </li>
+                        <li class="modal-button" href='#myModal20'><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="back">
+                <a href="./index.html">返回</a>
+            </div>
+        </div>
+        <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+            reserved.funbaby123</div>
+
+            <div id="modalData"></div>
+</body>
+
+</html>

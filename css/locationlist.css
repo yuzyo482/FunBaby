@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 源泉圓體;
+    font-weight: 500;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F0F0EB;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar img {
+    width: 56px;
+    height: 56px;
+    padding: 0 10px 8px 10px;
+}
+
+.navbar li {
+    float: left;
+    border-right: 5px #DCE6D7 solid;
+}
+
+.navbar li:last-child {
+    border-right: none;
+}
+
+.navbar li a{
+    display: flex;
+    margin: 0 25px ;
+    flex-direction: column;
+    color: #465A5A;
+    justify-content: end;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+#nav01{background-image: url('../pics/icon/icon01服務規定.svg');}
+
+#nav01:hover{
+    background-image: url('../pics/icon/icon01服務規定hover.svg');
+}
+
+#nav02{background-image: url('../pics/icon/icon02立即預約.svg');}
+
+#nav02:hover{
+    background-image: url('../pics/icon/icon02立即預約hover.svg');
+}
+
+#nav03{background-image: url('../pics/icon/icon03場所介紹.svg');}
+
+#nav03:hover{
+    background-image: url('../pics/icon/icon03場所介紹hover.svg');
+}
+
+#nav04{background-image: url('../pics/icon/icon04關於我們.svg');}
+
+#nav04:hover{
+    background-image: url('../pics/icon/icon04關於我們hover.svg');
+}
+
+#nav00{background-image: url('../pics/icon/icon00會員資料.svg');}
+
+#nav00:hover{
+    background-image: url('../pics/icon/icon00會員資料hover.svg');
+}
+.navbar li:last-child a {
+    margin-right: 0px;
+}
+
+
+.container {
+    margin: auto;
+    width: 1440px;
+}
+
+/* navAddress */
+.navAddress {
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    color: #465A5A;
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* main */
+.main {
+    /* height: 744px; */
+    color: #465A5A;
+}
+
+.mobileTitle{
+    width: 327px;
+    color: #86B5A7;
+    margin: 70px 24px 10px 24px;
+    border-bottom: 1px solid #86B5A7;
+    padding-bottom: 10px;
+}
+
+.locationList{
+    width: 1204px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 80px auto;
+    /* justify-content: space-between; */
+}
+.locationCard{
+    width: 316px;
+    height: 331px;
+    background-color: #DCE6D7;
+    border-radius: 20px;
+    padding: 36px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.locationCard:nth-child(3n+3){
+    margin-right: 0px;
+}
+
+#locationPic{
+    width: 300px;
+    height: 225px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.locationCard li{
+    height: 40px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.locationCard li img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.back a{
+    display: block;
+    width: 125px;
+    height: 56px;
+    line-height: 56px;
+    background-color: #86B5A7;
+    color: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+/* footer */
+.footer {
+    width: 1440px;
+    height: 90px;
+    margin: 0 auto;
+    /* line-height: 60px; */
+    background-color: #DCE6D7;
+    color: #86B5A7;
+    line-height: 90px;
+}
+
+.footer img {
+    width: 60px;
+    height: 60px;
+    /* padding-top: 15px; */
+    /* padding-left: 445px; */
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+@media (min-width:1440px){
+    .container{
+        width: 1920px;
+    }
+    .navAddress{
+        padding-left: 124px;
+    }
+
+    .footer{
+        width: 1920px;
+    }
+}
+
+/* screen<769px */
+@media (max-width:768px){
+    .container{
+        width: 375px;
+    }
+    .navAddress{
+        display: none;
+    }
+    .locationList{
+        width: 375px;
+        margin: 10px 24px;
+    }
+    .locationCard{
+        width: 144px;
+        height: 144px;
+        padding: 20px 8px;
+        margin-right: 7px;
+    }
+    #locationPic{
+        width: 144px;
+        height: 96px;
+        margin-bottom: 12px;
+    }
+    .locationCard li{
+        height: 20px;
+        line-height: 15px;
+        font-size: 10px;
+    }
+    .locationCard li img{
+        height: 10px;
+        width: 10px;
+        margin-right: 4px;
+        vertical-align: middle;
+    }
+    .locationCard:nth-child(3n+3){
+        margin-right: 7px;
+    }
+    .locationCard:nth-child(2n+2){
+        margin-right: 0px;
+    }
+    .back a{
+        margin-bottom: 20px;
+    }
+    .footer {
+        width: 375px;
+        height: 160px;
+        padding-top: 24px;
+        font-size: 10px;
+    }
+
+}

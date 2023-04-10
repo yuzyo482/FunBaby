@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇場所</title>
+    <link rel="stylesheet" href="./css/reservelocationpage.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./js/datepicker-zh-TW.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.js"></script>
+    <link rel="stylesheet" href="./css/timepicker.css">
+    <link rel="stylesheet" href="./css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="./css/detailmodal.css">
+    <script src="./js/designSelect.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker($.datepicker.regional["zh-TW"]);
+            $("#datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+            });
+            $(".timepicker").timepicker({
+                timeFormat: "HH:mm", // 時間隔式
+                interval: 30, //時間間隔
+                startTime: "09:00", // 開始時間
+                minTime: "09",
+                maxTime: "15",
+                // defaultTime: "9",
+                dynamic: false, //是否顯示項目，使第一個項目按時間順序緊接在所選時間之後
+                dropdown: true, //是否顯示時間條目的下拉列表
+                scrollbar: false, //是否顯示捲軸
+            });
+        });
+
+    </script>
+    <script>
+        $.get("modaldata.html", function (data) {
+            $("#modalData").html(data);
+        })
+        $.get("navbar.html", function (data) {
+            $(".header").html(data);
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="header"></div>
+
+    <div class="container">
+        <div class="navAddress">首頁 > 立即預約 > 選擇預約時段以及地點 > 選擇場所</div>
+        <div class="main">
+            <div class="leftDiv">
+                <div class="chooseForm">
+                    
+                    <div class="theDate formDesign">
+                        <img src="./pics/icon/icon89日期.svg" alt="">
+                        <input type="text" id="datepicker" class="datepicker">
+                    </div>
+                    <div class="theTime formDesign">
+                        <div class="timeTable">
+                            <span>開始時間</span><span style="display: none;">結束時間</span>
+                            <hr class="hrTable">
+                            <div class="timeOptionTable">
+                                <button class="timeOptions" value="09:00"
+                                    onclick="chooseTimePeriod(this)">09:00</button>
+                                <button class="timeOptions" value="09:30"
+                                    onclick="chooseTimePeriod(this)">09:30</button>
+                                <button class="timeOptions" value="10:00"
+                                    onclick="chooseTimePeriod(this)">10:00</button>
+                                <button class="timeOptions" value="10:30"
+                                    onclick="chooseTimePeriod(this)">10:30</button>
+                                <button class="timeOptions" value="11:00"
+                                    onclick="chooseTimePeriod(this)">11:00</button>
+                                <button class="timeOptions" value="11:30"
+                                    onclick="chooseTimePeriod(this)">11:30</button>
+                                <button class="timeOptions" value="12:00"
+                                    onclick="chooseTimePeriod(this)">12:00</button>
+                                <button class="timeOptions" value="12:30"
+                                    onclick="chooseTimePeriod(this)">12:30</button>
+                                <button class="timeOptions" value="13:00"
+                                    onclick="chooseTimePeriod(this)">13:00</button>
+                                <button class="timeOptions" value="13:30"
+                                    onclick="chooseTimePeriod(this)">13:30</button>
+                                <button class="timeOptions" value="14:00"
+                                    onclick="chooseTimePeriod(this)">14:00</button>
+                                <button class="timeOptions" value="14:30"
+                                    onclick="chooseTimePeriod(this)">14:30</button>
+                                <button class="timeOptions" value="15:00"
+                                    onclick="chooseTimePeriod(this)">15:00</button>
+                                <button class="timeOptions" value="15:30"
+                                    onclick="chooseTimePeriod(this)">15:30</button>
+                                <button class="timeOptions" value="16:00"
+                                    onclick="chooseTimePeriod(this)">16:00</button>
+                                <button class="timeOptions" value="16:30"
+                                    onclick="chooseTimePeriod(this)">16:30</button>
+                                <button class="timeOptions" value="17:00"
+                                    onclick="chooseTimePeriod(this)">17:00</button>
+                                <button class="timeOptions" value="17:30"
+                                    onclick="chooseTimePeriod(this)">17:30</button>
+                                <button class="timeOptions" value="18:00"
+                                    onclick="chooseTimePeriod(this)">18:00</button>
+                                <button class="timePickSure" onclick="saveTimePeriod()">確定</button>
+                            </div>
+                        </div>
+                        <img src="./pics/icon/icon88時間.svg" alt="">
+                        <button id="timeChoose" onclick="timeChoose()">選擇時間</button>
+                    </div>
+                    <div class="theLocation formDesign">
+                        <div class="locationTable">
+                            選擇地點
+                            <hr class="hrTable">
+                            <div class="locationOptionTable">
+                                <button class="locationOptions" onclick="chooseLocation(this)" value="1">大安區</button>
+                                <button class="locationOptions" onclick="chooseLocation(this)" value="2">中山區</button>
+                                <button class="locationOptions" onclick="chooseLocation(this)" value="3">內湖區</button>
+                                <button class="locationOptions" onclick="chooseLocation(this)" value="4">松山區</button>
+                            </div>
+                        </div>
+                        <img src="./pics/icon/icon95地址.svg" alt="">
+                        <button id="locationChoose" onclick="locationChoose()" value="0">選擇地點</button>
+                    </div>
+                    <div class="thePeople formDesign">
+                        <div class="peopleTable">
+                            選擇人數
+                            <hr class="hrTable">
+                            <div class="peopleOptionTable">
+                                <button class="peopleOptions" onclick="choosePeople(this)" value="1">1</button>
+                                <button class="peopleOptions" onclick="choosePeople(this)" value="2">2</button>
+                                <button class="peopleOptions" onclick="choosePeople(this)" value="3">3</button>
+                                <button class="peopleOptions" onclick="choosePeople(this)" value="4">4</button>
+                                <button class="peopleOptions" onclick="choosePeople(this)" value="5">5</button>
+                                <button class="peopleOptions" onclick="choosePeople(this)" value="6">6</button>
+                            </div>
+                        </div>
+                        <img src="./pics/icon/icon87人數.svg" alt="">
+                        <button id="peopleChoose" onclick="peopleChoose()">選擇人數</button>
+                    </div>
+                    <div class="yesnoButton">
+                        <div class="cancel"><a href="#" onclick="clearData()">清除</a></div>
+                        <div class="reserving"><a href="./registrationpage.html" onclick="passVal()">確認</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightDiv">
+                <div class="locationList">
+                    <!-- 1-5 -->
+                    <div class="locationChoice location1 people6">
+                        <img src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立永信幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區潮州街80號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal1'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：6位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location1 people4">
+                        <img src="./pics/kindergardenphotos/2/kindegarden0201.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立史萊姆幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區新生南路31號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal2'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：4位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location2 people2">
+                        <img src="./pics/kindergardenphotos/7/kindegarden0701.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立又兒美幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區基湖路1220號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal7'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：2位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location3 people3">
+                        <img src="./pics/kindergardenphotos/2/kindegarden0202.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立萊恩幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區成功路31號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal12'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：3位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location4 people5">
+                        <img src="./pics/kindergardenphotos/6/kindegarden0602.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立多莉幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區虎林街189號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal16'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：5位</p>
+                        </div>
+                    </div>
+                    <!-- 6-10 -->
+                    <div class="locationChoice location1 people3">
+                        <img src="./pics/kindergardenphotos/3/kindegarden0301.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立立夏幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區永康街471號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal3'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：3位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location1 people2">
+                        <img src="./pics/kindergardenphotos/4/kindegarden0401.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立夏恩幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區長興街11號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal4'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：2位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location2 people5">
+                        <img src="./pics/kindergardenphotos/8/kindegarden0801.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立康橋幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區敬業一路16號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal8'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：5位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location3 people1">
+                        <img src="./pics/kindergardenphotos/3/kindegarden0302.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立育全幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區東湖路26號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal13'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：1位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location4 people3">
+                        <img src="./pics/kindergardenphotos/7/kindegarden0702.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立巧可安幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區長春路11號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal17'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：3位</p>
+                        </div>
+                    </div>
+                    <!-- 11-15 -->
+                    <div class="locationChoice location2 people2">
+                        <img src="./pics/kindergardenphotos/9/kindegarden0901.jfif" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立愛麗絲幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區林森北路25號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal9'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：2位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location1 people5">
+                        <img src="./pics/kindergardenphotos/5/kindegarden0501.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立茉莉幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區杭州南路22號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal5'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：5位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location2 people4">
+                        <img src="./pics/kindergardenphotos/10/kindegarden1001.jfif" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立巧虎幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區劍南路462號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal10'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：4位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location3 people5">
+                        <img src="./pics/kindergardenphotos/4/kindegarden0402.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立荷美幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區民權東路2140號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal14'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：5位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location4 people3">
+                        <img src="./pics/kindergardenphotos/8/kindegarden0802.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立朵拉幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區光復北路33號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal18'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：3位</p>
+                        </div>
+                    </div>
+                    <!-- 16-20 -->
+                    <div class="locationChoice location1 people6">
+                        <img src="./pics/kindergardenphotos/6/kindegarden0601.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立琪安幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市大安區浦城街23號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal6'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：6位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location2 people5">
+                        <img src="./pics/kindergardenphotos/1/kindegarden0102.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立康乃爾幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市中山區天津街17號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal11'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：5位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location3 people2">
+                        <img src="./pics/kindergardenphotos/5/kindegarden0502.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立馨欣幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市內湖區碧山路24號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal15'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：2位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location4 people3">
+                        <img src="./pics/kindergardenphotos/9/kindegarden0902.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立喬治亞幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區敦化北路15號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal19'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：3位</p>
+                        </div>
+                    </div>
+                    <div class="locationChoice location4 people2">
+                        <img src="./pics/kindergardenphotos/10/kindegarden1002.jpg" alt="" class="locationPhoto">
+                        <div class="locationInfo">
+                            <ul>
+                                <li><img src="./pics/icon/icon94場所.png" alt="">臺北市私立多比幼兒園</li>
+                                <li><img src="./pics/icon/icon95地址.png" alt="">臺北市松山區新東街31號</li>
+                            </ul>
+                        </div>
+                        <div class="locationInfoRight">
+                            <div class="seeMore modal-button" href='#myModal20'>場所介紹<img src="./pics/icon/icon96箭頭.svg"
+                                    alt=""></div>
+                            <p>剩餘人數：2位</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+            reserved.funbaby123</div>
+
+
+        <!-- The Modal -->
+        <div id="modalData"></div>
+
+        <script>
+            document.getElementById('datepicker').value = localStorage.getItem("dateValue");
+            document.getElementById('timeChoose').innerHTML = localStorage.getItem("timeValue");
+            document.getElementById('locationChoose').innerHTML = localStorage.getItem("locationContent");
+            document.getElementById('peopleChoose').innerHTML = localStorage.getItem("peopleContent");
+            document.getElementById('locationChoose').value = parseInt(localStorage.getItem("locationValue"));
+            document.getElementById('peopleChoose').value = parseInt(localStorage.getItem("peopleValue"));
+            $(function () {
+                $('.locationChoice').hide();
+                $('.location' + document.getElementById('locationChoose').value).show();
+                var k = document.getElementById('peopleChoose').value;
+                k = k - 1;
+                        for (k; k >= 0; k--) {
+                            $('.people' + k).hide();
+                        }
+            });
+        // localStorage.removeItem("dateValue");
+        </script>
+
+        <script>
+            $(".locationChoice").on('click', function () {
+                $(".locationChoice.clicked").toggleClass('clicked');
+                $(this).toggleClass('clicked');
+                localStorage.setItem("reserveLocation", this.children[0].currentSrc);
+                localStorage.setItem("reservePlace", this.children[1].children[0].children[0].outerText);
+                localStorage.setItem("reserveAddress", this.children[1].children[0].children[1].outerText);
+            });
+        </script>
+        <script>
+            $(function () {
+                $('.locationOptions').click(function () {
+                    $('.locationChoice').hide();
+                    var i = $(this).val();
+                    var k = document.getElementById('peopleChoose').value;
+
+                    if (i == 0) {
+                        $('.locationChoice').show()
+                    } else {
+                        $('.location' + i).show();
+                        k = k - 1;
+                        for (k; k >= 0; k--) {
+                            $('.people' + k).hide();
+                        }
+                    }
+                });
+                $('.peopleOptions').click(function () {
+                    $('.locationChoice').hide();
+                    var j = $(this).val();
+                    var locationChoose = document.getElementById('locationChoose').value;
+                    if (j == 0) {
+                        $('.locationChoice').show()
+                    } else {
+                        for (j; j < 7; j++) {
+                            $('.people' + j).show();
+                        };
+                        if (locationChoose != 0) {
+                            for (var a = 1; a <= 4; a++) {
+                                if (a != locationChoose) {
+                                    $('.location' + a).hide();
+                                };
+                            };
+                        }
+                    };
+                });
+            });
+        </script>
+        <script>
+            function clearData() {
+                document.getElementById('datepicker').value = "";
+                document.getElementById('timeChoose').innerHTML = "選擇時間";
+                document.getElementById('locationChoose').innerHTML = "選擇地點";
+                document.getElementById('peopleChoose').innerHTML = "選擇人數";
+            }
+
+            function passVal() {
+            const datePick = document.getElementById('datepicker').value;
+            const timePick = document.getElementById('timeChoose').innerHTML;
+            const locationContent = document.getElementById('locationChoose').innerHTML;
+            const peopleContent = document.getElementById('peopleChoose').innerHTML;
+            const locationPick = document.getElementById('locationChoose').value;
+            const peoplePick = document.getElementById('peopleChoose').value;
+
+            localStorage.setItem("dateValue", datePick);
+            localStorage.setItem("timeValue", timePick);
+            localStorage.setItem("locationContent", locationContent);
+            localStorage.setItem("peopleContent", peopleContent);
+            localStorage.setItem("locationValue", locationPick);
+            localStorage.setItem("peopleValue", peoplePick);
+        }
+        
+        </script>
+
+        <script src="./js/locationmodal.js"></script>
+        <script src="./js/optionchoose.js"></script>
+</body>
+
+</html>

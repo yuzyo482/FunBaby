@@ -1,0 +1,85 @@
+<head>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/loginbox.css">
+    <link rel="stylesheet" href="./css/detailmodal.css">
+</head>
+
+<body>
+    <div class="logo"><a id="logo" href="./index.html"></a></div>
+    <div class="navbar">
+        <ul>
+            <li><a id="nav01" href="./index.html#section01">服務規定</a></li>
+            <li><a id="nav02" href="./index.html#section02">立即預約</a></li>
+            <li><a id="nav03" href="./index.html#section03">場所介紹</a></li>
+            <li><a id="nav04" href="./index.html#section04">關於我們</a></li>
+            <li><a id="nav00" href="#loginModal" class="modal-button">會員資料</a></li>
+        </ul>
+    </div>
+    <div class="hamburgerMenu"><a href="#mobileSelect" id="mobileMenu" class="modal-button"></a></div>
+    <div id="mobileSelect" class="modal">
+            <div class="mobileSelectBar">
+                <ul>
+                    <li><a id="mobNav01" href="./index.html#section02">立即預約</a></li>
+                    <li><a id="mobNav02" href="#loginModal" class="modal-button">會員資料</a></li>
+                    <li><a id="mobNav03" href="#">預約紀錄</a></li>
+                    <li><a id="mobNav04" href="./index.html#section04">聯絡我們</a></li>
+                    <li><a id="mobNav05" href="#">登出</a></li>
+                </ul>
+            </div>
+    </div>
+    <div id="loginModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="login-modal-content">
+            <div class="loginMain">
+                <div class="loginTitle">會員登入</div>
+                <div class="socialLogIn">
+                    <p>使用其他方式快速登入/註冊</p><br>
+                    <a href="" onclick="logInAccount()"><img src="./pics/quickloginicon/gmail.jpg" alt=""></a>
+                    <a href="" onclick="logInAccount()"><img src="./pics/quickloginicon/line.png" alt=""></a>
+                    <a href="" onclick="logInAccount()"><img src="./pics/quickloginicon/facebook.png" alt=""></a>
+                    <a href="" onclick="logInAccount()"><img src="./pics/quickloginicon/apple.png" alt=""></a>
+                </div>
+                <div class="or">or</div>
+                <div class="typeInput">
+                    <form>
+                        <div>
+                            <label for="">
+                                帳號
+                                <input type="text" placeholder="請輸入電子郵件" id="account" name="account" required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            </label>
+                        </div>
+                        <div>
+                            <label for="">
+                                密碼
+                                <input type="password" placeholder="請輸入密碼" id="password" name="password" required
+                                    pattern="[a-z0-9._%+-]">
+                            </label>
+                        </div>
+                        <li><a href="./forgetpassword.html" class="forgetPassword">忘記密碼</a><button type="submit"
+                                id="login" class="login" onclick="setAccount()">登入</button></li>
+                        <li>您還不是會員？<a href="./signinbox.html">註冊會員</a></li>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            function setAccount() {
+                const accountValue = document.getElementById('account').value;
+                localStorage.setItem("account", accountValue);
+            }
+            function logInAccount() {
+                localStorage.setItem("account", 'test@gmail.com')
+                localStorage.setItem("reserveLocation", './pics/kindergardenphotos/4/kindegarden0402.jpg');
+                localStorage.setItem("reservePlace", '臺北市私立荷美幼兒園');
+                localStorage.setItem("reserveAddress", '臺北市內湖區民權東路2140號');
+                localStorage.setItem("dateValue", '2022/12/15');
+                localStorage.setItem("timeValue", '10:30');
+            }
+        </script>
+        <script src="./js/loginmodal.js"></script>
+        <!-- <script src="./js/mobileselectmodal.js"></script> -->
+
+</body>

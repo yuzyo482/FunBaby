@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 源泉圓體;
+    font-weight: 500;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F0F0EB;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* .header {
+    background-color: #F0F0EB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0;
+    border-bottom: 7px solid #86B5A7;
+    position: fixed;
+    z-index: 99; 
+    width: 100%;
+    height: 80px;
+} */
+
+.logo {
+    margin-right: 408px;
+}
+
+.navbar img {
+    width: 56px;
+    height: 56px;
+    padding: 0 10px 8px 10px;
+}
+
+.navbar li {
+    float: left;
+    border-right: 5px #DCE6D7 solid;
+}
+
+.navbar li:last-child {
+    border-right: none;
+}
+
+.navbar li a {
+    display: flex;
+    margin: 0 25px;
+    flex-direction: column;
+    color: #465A5A;
+    justify-content: end;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#nav01 {
+    background-image: url('../pics/icon/icon01服務規定.svg');
+}
+
+#nav01:hover {
+    background-image: url('../pics/icon/icon01服務規定hover.svg');
+}
+
+#nav02 {
+    background-image: url('../pics/icon/icon02立即預約.svg');
+}
+
+#nav02:hover {
+    background-image: url('../pics/icon/icon02立即預約hover.svg');
+}
+
+#nav03 {
+    background-image: url('../pics/icon/icon03場所介紹.svg');
+}
+
+#nav03:hover {
+    background-image: url('../pics/icon/icon03場所介紹hover.svg');
+}
+
+#nav04 {
+    background-image: url('../pics/icon/icon04關於我們.svg');
+}
+
+#nav04:hover {
+    background-image: url('../pics/icon/icon04關於我們hover.svg');
+}
+
+#nav00 {
+    background-image: url('../pics/icon/icon00會員資料.svg');
+}
+
+#nav00:hover {
+    background-image: url('../pics/icon/icon00會員資料hover.svg');
+}
+
+.navbar li:last-child a {
+    margin-right: 0px;
+}
+
+
+.container {
+    margin: auto;
+    width: 1440px;
+}
+
+/* navAddress */
+.navAddress {
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    color: #465A5A;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 4px solid #DCE6D7;
+}
+
+/* main */
+.main {
+    height: 740px;
+    color: #465A5A;
+    padding-top: 56px;
+}
+
+/* left */
+.leftDiv {
+    width: 480px;
+    background-color: #F0F0EB;
+    float: left;
+    text-align: left;
+}
+
+.dataForm {
+    /* border: 1px red solid; */
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    font-size: 24px;
+    padding-top: 100px;
+}
+
+#divTitle {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.formDesign {
+    width: 260px;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 20px;
+    margin: 20px 10px;
+    margin-left: 0px;
+    border-radius: 20px;
+    background-color: #DCE6D7;
+}
+
+.theDate {
+    margin-top: 60px;
+}
+
+.footButton {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 10px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.edited {
+    box-sizing: border-box;
+    width: 125px;
+    height: 56px;
+    border-radius: 20px;
+    background-color: #FAFAFA;
+    border: 2px #86B5A7 solid;
+}
+
+.edited,
+.logout {
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.edited {
+    color: #86B5A7;
+    display: block;
+    height: 54px;
+    line-height: 54px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.logout {
+    width: 125px;
+    height: 56px;
+    border: none;
+    border-radius: 20px;
+    background: #86B5A7;
+    color: #FAFAFA;
+}
+
+/* right */
+.rightDiv {
+    width: 960px;
+    height: 740px;
+    float: left;
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: #465A5A;
+    font-size: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.rightDiv::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.rightDiv {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.locationList {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    margin: 44px 100px;
+    padding-top: 56px;
+    text-align: left;
+    position: relative;
+}
+
+.locationList hr {
+    position: absolute;
+    color: #465A5A;
+    background-color: #465A5A;
+    height: 3px;
+}
+
+#topHideLine {
+    width: 670px;
+    border-top: 2px solid #FAFAFA;
+}
+
+#topLine {
+    width: 670px;
+    border-top: 4px solid #465A5A;
+}
+
+#topHideLine2 {
+    width: 650px;
+    border-top: 2px solid #FAFAFA;
+}
+
+#topLine2 {
+    width: 650px;
+    border-top: 4px solid #465A5A;
+}
+
+.reservingCase,
+.reservedCase {
+    width: 710px;
+    margin-bottom: 30px;
+    background-color: #F0F0EB;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 35px 30px;
+    margin-top: 15px;
+}
+
+.reservingCase {
+    background-color: #DCE6D7;
+}
+
+.locationPhoto {
+    width: 120px;
+    height: 90px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.reservingCase:hover {
+    background-color: #DCE6D7;
+}
+
+.locationInfo img,
+.locationInfoRight img {
+    width: 30px;
+    height: 30px;
+}
+
+.locationInfo {
+    width: 400px;
+    text-align: left;
+}
+
+.locationInfo ul {
+    margin-left: 50px;
+}
+
+.locationInfo li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.locationInfo li:last-child {
+    margin-bottom: 0;
+}
+
+.locationInfo img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.locationInfoRight {
+    width: 130px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.locationInfoRight button {
+    display: block;
+    border: none;
+    width: 130px;
+    height: 56px;
+    font-size: 20px;
+    line-height: 56px;
+    border-radius: 20px;
+    background-color: #86B5A7;
+    color: #FAFAFA;
+}
+
+
+/* footer */
+.footer {
+    width: 1440px;
+    height: 90px;
+    margin: 0 auto;
+    /* line-height: 60px; */
+    background-color: #DCE6D7;
+    color: #86B5A7;
+    line-height: 90px;
+}
+
+.footer img {
+    width: 60px;
+    height: 60px;
+    /* padding-top: 15px; */
+    /* padding-left: 445px; */
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+@media (min-width:1440px) {
+    .container {
+        width: 1920px;
+    }
+
+    .leftDiv {
+        width: 528px;
+    }
+
+    .rightDiv {
+        width: 1392px;
+    }
+
+    .locationList {
+        width: 1144px;
+    }
+}
+
+@media (min-width:1440px) {
+    .footer {
+        width: 1920px;
+    }
+
+    .locationList table {
+        width: 1144px;
+    }
+
+    #topHideLine,
+    #topLine {
+        width: 1054px;
+    }
+
+    #topHideLine2,
+    #topLine2 {
+        width: 1034px;
+    }
+
+    .reservingCase,
+    .reservedCase {
+        width: 1064px;
+        padding: 35px 40px;
+    }
+
+    .locationPhoto {
+        width: 160px;
+        height: 100px;
+    }
+
+    .locationInfo {
+        width: 710px;
+    }
+
+}

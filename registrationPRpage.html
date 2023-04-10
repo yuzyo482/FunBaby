@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報名表</title>
+    <link rel="stylesheet" href="./css/registrationPRpage.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $.get("navbar.html",function(data){
+            $(".header").html(data);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header"></div>
+
+    <div class="container">
+        <div class="navAddress">首頁 > 立即預約 > 選擇預約時段以及地點 > 選擇場所 > 填寫報名表</div>
+        <div class="registrationForm">填寫報名表
+            <div class="registrationBox">
+                <div class="reTitle">家長資料</div>
+                <div class="reTypeInput">
+                    <ul>
+                        <li>家長姓名
+                            <input type="text" placeholder="請輸入姓名">
+                        </li>
+                        <li>孩童之關係
+                            <input type="text" placeholder="例如：母女">
+                        </li>
+                        <li>身分證字號
+                            <input type="text" placeholder="請輸入身份證字號">
+                        </li>
+                        <li>連絡電話
+                            <input type="text" placeholder="請輸入電話號碼">
+                        </li>
+                        <li>電子郵件
+                            <input type="text" placeholder="請輸入電子郵件">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="previous"><a href="./registrationpage.html">上一步</a></div>
+                <div class="confirm"><a href="./reserveokpage.html">確認</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+        reserved.funbaby123</div>
+</body>
+
+</html>

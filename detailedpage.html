@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detailedpage</title>
+    <link rel="stylesheet" href="./css/detailedpage.css">
+    <script type="text/javascript">
+        function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+            }
+        }
+
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+            if (!x && d.getElementById) x = d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+            var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+                if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="upperPart">
+                <div class="picChange">
+                    <table width="690" align="center">
+                        <tr>
+                            <td align="center"><img src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="" id="Image1"
+                                    onClick="MM_swapImage('show','','pics/kindergardenphotos/1/kindegarden0101.jpg',1)"></td>
+                            <td rowspan="3">
+                                <img width="100%" id="show" src="./pics/kindergardenphotos/1/kindegarden0101.jpg" alt="">
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td align="center"><img src="./pics/kindergardenphotos/1/kindegarden0102.jpg" alt="" id="Image2"
+                                    onClick="MM_swapImage('show','','pics/kindergardenphotos/1/kindegarden0102.jpg',1)"></td>
+
+                        </tr>
+                        <tr>
+                            <td align="center"><img src="./pics/kindergardenphotos/1/kindegarden0103.jpg" alt="" id="Image3"
+                                    onClick="MM_swapImage('show','','pics/kindergardenphotos/1/kindegarden0103.jpg',1)"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="locationInfo">
+                    <ul>
+                        <li><img src="./pics/icon/icon94場所.svg" alt="">臺北市私立永信幼兒園</li>
+                        <li><img src="./pics/icon/icon95地址.svg" alt="">臺北市大安區潮州街80號</li>
+                        <li><img src="./pics/icon/icon92電話.svg" alt="">02-2321-3530</li>
+                        <li><img src="./pics/icon/icon93信箱.svg" alt="">xexaholo486@gmail.com</li>
+                    </ul>
+                    <p>寶貝孩子的第一所幼兒園，我們擁有舒適安全的環境及合格嚴謹的師資，提供寶貝最優質的幼兒園生活，期待您的加入！</p>
+                </div>
+            </div>
+            <div class="lowerPart">
+                <div class="teacherCard">
+                    XX老師<br>
+                    <img id="teacherPic" src="./pics/teachers/teacher01.svg" alt="">
+                    <div class="teacherInfo">
+                    <ul>
+                        <li>
+                            <img src="./pics/icon/icon71學士帽.svg" alt="">‧新竹師範學院幼教系
+                        </li>
+                        <li>
+                            <img src="./pics/icon/icon72公事包.svg" alt="">‧合格幼教老師
+                        </li>
+                        <li>
+                            <img src="./pics/icon/icon73證照.svg" alt="">
+                            <ul>
+                                <li>‧幼稚園教師合格證</li>
+                                <li>‧保母人員技術士證照</li>
+                                <li>‧幼兒園園長專業訓練班結業</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="teacherCard">
+                    XX老師<br>
+                    <img id="teacherPic" src="./pics/teachers/teacher02.svg" alt="">
+                    <div class="teacherInfo">
+                    <ul>
+                        <li>
+                            <img src="./pics/icon/icon71學士帽.svg" alt="">‧明新科技大學幼兒保育系
+                        </li>
+                        <li>
+                            <img src="./pics/icon/icon72公事包.svg" alt="">
+                                ‧合格教保老師
+                        </li>
+                        <li>
+                            <img src="./pics/icon/icon73證照.svg" alt="">
+                            ‧保母人員技術士證照
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="teacherCard">
+                    XX老師<br>
+                    <img id="teacherPic" src="./pics/teachers/teacher03.svg" alt="">
+                    <div class="teacherInfo">
+                    <ul>
+                        <li>
+                            <img src="./pics/icon/icon71學士帽.svg" alt="">‧國立台中師範學院幼教系
+                        </li>
+                        <li>
+                            <img src="./pics/icon/icon72公事包.svg" alt="">
+                            <ul>
+                                <li>‧合格教保老師</li>
+                                <li>‧多年幼教經驗</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="./pics/icon/icon73證照.svg" alt="">
+                            ‧幼稚園教師合格證
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><img src="./pics/icon/footerLOGO.png" alt="">Copyright &copy; funbaby 版權所有. All rights
+        reserved.funbaby123</div>
+</body>
+
+</html>
